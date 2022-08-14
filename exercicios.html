@@ -139,8 +139,11 @@
                             </div>
                         </div><!-- final do card -->
                         <br>
-
-
+                    </div><!-- End col-md-12 -->
+                </div>    <!-- End content-row -->
+            </div> <!-- End col-lg-6-->
+        </div>  <!-- End main-row -->
+                        <div class="col-md-12">
                         <footer>
                             <p class="footerp">Copyright ©2022 desenvolvido por Matheus Monteiro</p>
                             <!-- <ul id="contact_follow">
@@ -150,11 +153,12 @@
                             <li><a href="#"><span class=" icon-googleplus"></span></a></li>
                         </ul>-->
                         </footer>
+                        </div>
 
-                    </div><!-- End col-md-12 -->
-                </div><!-- End content-row -->
-            </div><!-- End col-lg-6-->
-        </div><!-- End main-row -->
+                    
+            
+          
+      
     </div><!-- End main-wrapper  -->
 
     <!-- JQUERY -->
@@ -165,35 +169,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/retina-replace.min.js"></script>
     <script src="js/functions.js"></script>
-
-    <script type="text/javascript">
-        /* <![CDATA[ */
-
-        setTimeout(function () {
-
-            $('.progress .progress-bar').each(function () {
-                var me = $(this);
-                var perc = me.attr("data-percentage");
-
-                var current_perc = 0;
-
-                var progress = setInterval(function () {
-                    if (current_perc >= perc) {
-                        clearInterval(progress);
-                    } else {
-                        current_perc += 1;
-                        me.css('width', (current_perc) + '%');
-                    }
-
-                    me.text((current_perc) + '%');
-
-                }, 50);
-
-            });
-
-        }, 500);
-  /* ]]> */
-    </script>
 
     <!-- FANCYBOX -->
     <script src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.4" type="text/javascript"></script>
