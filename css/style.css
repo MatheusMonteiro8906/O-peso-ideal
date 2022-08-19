@@ -603,7 +603,7 @@ html[data-useragent*='MSIE 10.0'] input, html[data-useragent*='MSIE 10.0'] .btn.
 
 /*  MEDIA QUERIES */
 
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 768px) and (max-width: 2979px) {
 header {position:absolute;}
 #main-img-container {
 	position:relative; 
@@ -627,6 +627,13 @@ header {position:absolute;}
 .col-md-4.plan:first-child {
   margin-right:0;
   margin-left:0;
+}
+.celular {
+	visibility: hidden;
+}
+
+.pcTablet {
+	visibility: visible;
 }
 
 }
@@ -706,7 +713,18 @@ h1 {
 	}
 	.plan-tall {margin-right:0;}
 
-}	
+
+
+}
+
+@media (max-width: 769px) {
+	.pcTablet {
+		visibility: hidden;
+	}
+	.celular {
+		visibility: visible;
+	}
+}
 
 /* Mobile */
 @media (max-width: 480px) {
@@ -723,6 +741,9 @@ ul.data-lessons li{
 	padding-left:0;
 	border-left: 0;
 	margin-top:5px;
+}
+.celular {
+	visibility: visible;
 }
 .classes.media > .pull-left{float:none !important; margin-left:0;}
 }
