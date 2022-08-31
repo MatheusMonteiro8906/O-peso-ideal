@@ -63,10 +63,16 @@
             ideal. Ele aponta se o peso está adequado ou se está abaixo ou acima do peso.</p>
           <hr class="add_bottom_30">
 
-          <div class="row">
+          <div class="row">           
             <div class="col-md-6">
-              <form>
-                <div class="form-group"><input type="Number" min="0" max="120" class="form-control" name="Idade"
+              
+              <h2 class="titleMass">Índice de massa corporal</h2>
+              
+              <p>Atualmente conhecido como o método mais popular utilizado para avaliar o nosso corpo,
+                 tendo também uma fórmula bem fácil de compreender: dividir o peso em quilogramas pela altura em metros elevada ao quadrado. </p>
+              
+                 <form>
+                <div class="form-group"><input type="number" min="0" max="120" class="form-control" name="Idade"
                     placeholder="Idade"></div>
 
                 <div style="text-align: center;" class="form-group">
@@ -78,9 +84,9 @@
 
                 </div>
 
-                <div class="form-group"><input type="text" class="form-control" name="Weight" placeholder="Peso"></div>
+                <div class="form-group"><input type="number" class="form-control" name="Weight" placeholder="Peso"  min="0" max="120"></div>
 
-                <div class="form-group">
+                <div class="form-group" style="display: none;">
                   <div class="styled-select">
                     <select class="form-control col-md-3" name="weight_select">
                       <option value="kilo">Por quilos (KG)</option>
@@ -89,10 +95,9 @@
                   </div>
                 </div>
 
-                <div class="form-group"><input type="text" class="form-control" name="Height" placeholder="Tamanho">
-                </div>
+                <div class="form-group"><input type="number" class="form-control" name="Height" placeholder="Tamanho"  min="0" max="120"></div>
 
-                <div class="form-group">
+                <div class="form-group" style="display: none;">
                   <div class="styled-select">
                     <select class="form-control" name="height_select">
                       <option value="cm">Por centímetros (cm)</option>
@@ -103,7 +108,7 @@
 
                 <input type="hidden" name="calculator" value="bmi_calculator" />
               </form>
-              <button id="selectBtn" class="button_medium add_top"
+              <button id="selectBtn" class="button_medium calcular add_top"
                 onclick="setTimeout(scrollbot, 30)()">Calcular</button>
             </div>
 
@@ -114,13 +119,13 @@
                 <div id="bmi_value">0</div>
                 <div id="indicator"></div>
               </div>
-              <h3>Tabela IMC</h3>
-              <div class="table-responsive">
+              <h3 class="tabelaTitle">Tabela IMC</h3>
+              <div class="table-responsive tableIMG">
                 <table class="table table-striped table-bordered table-condensed">
                   <thead>
                     <tr>
-                      <th>Numeração IMC</th>
-                      <th>Categoria</th>
+                      <th class="tableIMG">Numeração IMC</th>
+                      <th class="tableIMG">Categoria</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -170,9 +175,9 @@
   </div><!-- End content-row -->
   </div><!-- End col-lg-6-->
   </div><!-- End main-row -->
-      <div class="col-md-12">
+      <div class="col-md-12 pcTablet">
       <footer>
-        <p class="footerp pcTablet">Copyright ©2022 desenvolvido por Matheus Monteiro</p>
+        <p class="footerp ">Copyright ©2022 desenvolvido por Matheus Monteiro</p>
         <!-- <ul id="contact_follow">
                             <li><a href="#"><span class="icon-instagram"></span></a></li>
                             <li><a href="#"><span class="icon-facebook"></span></a></li>

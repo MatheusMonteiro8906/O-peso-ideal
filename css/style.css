@@ -3,6 +3,10 @@
 body {
     font-family: 'Lato', sans-serif !important;	
 }
+*{
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+}
 
 	/* Preloader */
 #preloader {
@@ -238,7 +242,10 @@ a.button_medium, .button_medium, input.button_medium {
 	outline:none;
 	margin-bottom:20px;
 }
-a.button_medium:hover, .button_medium:hover, input.button_medium:hover {background:#29abe0; color:#fff;}
+a.button_medium:hover, .button_medium:hover, input.button_medium:hover {
+	background:#29abe0;
+	 color:#fff;
+	}
 
 .review_strip{
 	background:#f8f8f8;
@@ -711,7 +718,16 @@ h1 {
 		border-left: 1px;
 		border: solid #dddddd;
 	}
-	.plan-tall {margin-right:0;}
+	.plan-tall {
+		margin-right:0;
+	}
+	.result {
+		margin-top: 10px;
+	}
+	*{
+		padding-left: 5px !important;
+		padding-right: 5px !important;
+	}
 
 
 
@@ -724,6 +740,11 @@ h1 {
 	.celular {
 		visibility: visible;
 	}
+
+	.result {
+		margin-top: 10px;
+	}
+
 }
 
 /* Mobile */
@@ -909,6 +930,14 @@ input[type=checkbox]:checked + label {
 .hovergif:hover {
 	opacity: 0;
 }
+.calcular{
+	width: 90%;
+	display: block;
+    margin: 0 auto;
+}
+.tableIMG{
+  text-align: center;
+}
 .hovergif {
 	position: absolute;
 }
@@ -929,4 +958,10 @@ ul.data-lessons  li:first-child{
 	border-left: none;
 	margin-left:0;
 	padding-left:0;
+}
+.tabelaTitle {
+	text-align: center;
+}
+.titleMass {
+	text-align: center;
 }
