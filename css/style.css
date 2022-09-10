@@ -935,6 +935,11 @@ input[type=checkbox]:checked + label {
 	display: block;
     margin: 0 auto;
 }
+#exercicios {
+	width: 140px;
+    margin: 0 auto;
+	display: none;
+}
 .tableIMG{
   text-align: center;
 }
