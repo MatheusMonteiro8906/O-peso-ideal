@@ -925,6 +925,7 @@ input[type=checkbox]:checked + label {
 
 .HRMaior {
     background-color: #232323;
+	height: 1px;
 }
 
 .hovergif:hover {
@@ -969,4 +970,12 @@ ul.data-lessons  li:first-child{
 }
 .titleMass {
 	text-align: center;
+}
+
+iframe {
+	padding: 0px !important;
+}
+
+.hoverVideo  {
+	cursor: pointer;
 }
