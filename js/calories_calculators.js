@@ -71,43 +71,12 @@ function calc_BMI() {
     0 == b ? ($("#bmi_value").text(""), $("#indicator").text(" "), $("#indicator").text("Por favor, complete o formulário."), $("#DietTittle").text("Por favor, complete corretamente o formulário para que possamos calcular corretamente o seu IMC.")) 
     : (a = 1E4 * a / (b * b), $("#bmi_value").text(a.toFixed(2)), 30 < a ? ($("#bmi_level").text("Obeso"), $("#indicator").text("Eita! você está extremamente acima do peso."), $("#DietTittle").text("Procure um médico!"), $("#Diet").text("Profissionais da área de Nutrição afirmam que, pessoas nesse nível podem acarretar: problemas respiratórios, cardiovasculares e diabetes. Buscar ajuda de profissionais imediata é extremamente recomendado nesse nível de IMC."), document.getElementById("exercicios").style.display = "block")
      : 25 < a ? ($("#bmi_level").text("Acima do peso"), $("#indicator").text("Ei, O seu corpo está um pouco acima do peso."), $("#DietTittle").text("A dieta ideal para você!"), $("#Diet").text("Profissionais da área de Nutrição afirmam que, para pacientes acima do peso é recomendado uma reeducação alimentar, com uma dieta hipocalórica, hipolipídica e normoproteica. mantendo em torno de no máximo 3 refeições bem pensadas por dia, além disso, manter uma rotina de exercícios físicos díarios de pelo menos 40 minutos. Para o cálculo de calorias díarias a serem consumidas, o usuário precisa consultar um nutricionista para que possa ser feita uma avaliação baseada nas caracterísicas do paciente."), document.getElementById("exercicios").style.display = "block")
-     : 18.5 < a ? ($("#bmi_level").text("Peso ideal"), $("#indicator").text("Parabéns, Seu corpo está nas condições ideais."), $("#DietTittle").text("A dieta ideal para você!"), $("#Diet").text(" Parabéns! Você está no seu peso ideal. De acordo com especialistas, deve-se ingerir de 4 a 5 porções de frutas, verduras e legumes por dia, além de uma prática diária de exercícios por pelo menos 30 minutos, mantendo apenas 4 refeições por dia. Para o cálculo de calorias díarias a serem consumidas, o usuário precisa consultar um nutricionista para que possa ser feita uma avaliação baseada nas caracterísicas do paciente."), document.getElementById("exercicios").style.display = "block")
-     : 16.5 < a ? ($("#bmi_level").text("abaixo do peso"), $("#indicator").text("Atualmente você está um pouco abaixo do peso."), $("#DietTittle").text("A dieta ideal para você!"), $("#Diet").text("Profissionais da área de Nutrição afirmam que, para pacientes abaixo do peso é recomendado uma dieta hipercalórica, hiperproteica e hiperlipídica, fracionada em volumes medianos ao dia (entre 5 a 6 refeições) contendo verduras, legumes e frutas em pelo menos 3 delas. Deve-se também manter também uma prática diária de exercícios físicos focados em ganho de massa muscular por pelo menos 30 minutos. Para o o cálculo de calorias díarias a serem consumidas, o usuário precisa consultar um nutricionista para que possa ser feita uma avaliação baseada nas caracterísicas do paciente."), document.getElementById("exercicios").style.display = "block")
+     : 18.5 < a ? ($("#bmi_level").text("Peso ideal"), $("#indicator").text("Parabéns, seu corpo está nas condições ideais."), $("#DietTittle").text("A dieta ideal para você!"), $("#Diet").text(" Parabéns! Você está no seu peso ideal. De acordo com especialistas, deve-se ingerir de 4 a 5 porções de frutas, verduras e legumes por dia, além de uma prática diária de exercícios por pelo menos 30 minutos, mantendo apenas 4 refeições por dia. Para o cálculo de calorias díarias a serem consumidas, o usuário precisa consultar um nutricionista para que possa ser feita uma avaliação baseada nas caracterísicas do paciente."), document.getElementById("exercicios").style.display = "block")
+     : 16.5 < a ? ($("#bmi_level").text("Abaixo do peso"), $("#indicator").text("Atualmente você está um pouco abaixo do peso."), $("#DietTittle").text("A dieta ideal para você!"), $("#Diet").text("Profissionais da área de Nutrição afirmam que, para pacientes abaixo do peso é recomendado uma dieta hipercalórica, hiperproteica e hiperlipídica, fracionada em volumes medianos ao dia (entre 5 a 6 refeições) contendo verduras, legumes e frutas em pelo menos 3 delas. Deve-se também manter também uma prática diária de exercícios físicos focados em ganho de massa muscular por pelo menos 30 minutos. Para o o cálculo de calorias díarias a serem consumidas, o usuário precisa consultar um nutricionista para que possa ser feita uma avaliação baseada nas caracterísicas do paciente."), document.getElementById("exercicios").style.display = "block")
      : 0 < a ? ($("#bmi_level").text("Magreza extrema"), $("#indicator").text("Você está extremamente abaixo do peso"), $("#DietTittle").text("A dieta ideal para você!"), $("#Diet").text("Profissionais da área de Nutrição afirmam que, para pacientes muito abaixo do peso, É recomendado uma dieta hipercalórica, hiperproteica e hiperlipídica, fracionada em pequenos volumes ao dia (em até 8 refeições). deve-se também manter uma prática de pelo menos 50 minutos diários focados em ganho de massa muscular. Para o cálculo de calorias díarias a serem consumidas, o usuário precisa consultar um nutricionista para que possa ser feita uma avaliação baseada nas caracterísicas do paciente."), document.getElementById("exercicios").style.display = "block")
      : ($("#bmi_value").text(""), $("#bmi_level").text(""), $("#indicator").text("Por favor, complete o formulário."), $("#DietTittle").text("Por favor, complete corretamente o formulário para que possamos calcular corretamente o seu IMC.")))
 }
-function calc_daily_calorie() {
-    var a = calc_BMR();
-    if (0 > a)
-        $("#your_cal_intake").text("------");
-    else {
-        var b;
-        switch ($("[name=exercise_level]").val()) {
-            case "nospec":
-                b = 1;
-                break;
-            case "sedentary":
-                b = 1.2;
-                break;
-            case "light":
-                b = 1.375;
-                break;
-            case "moderate":
-                b = 1.55;
-                break;
-            case "hard":
-                b = 1.725;
-                break;
-            case "nonstop":
-                b = 1.9;
-                break;
-            default:
-                b = 1
-        }
-        a *= b;
-        $("#your_cal_intake").text(a.toFixed(2))
-    }
-}
+
 function calc_easy_burned_unit(a, b) {
     var c = 0, d;
     for (d in b) {
@@ -129,7 +98,7 @@ function calc_easy_burned() {
         a = calc_easy_burned_unit(a, MET_DATA_VIA);
         $("#via_total").text(a.toFixed(2));
         $("#easy_cal_burned").text((b + c + a).toFixed(2));
-        $("#indicator").text("See your customized data below:")
+        $("#indicator").text("veja seus dados abaixo:")
     }
 }
 function calc_adv_calculator() {
