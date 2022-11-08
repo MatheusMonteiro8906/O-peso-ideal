@@ -941,6 +941,7 @@ input[type=checkbox]:checked + label {
     margin: 0 auto;
 	display: none;
 }
+
 .tableIMG{
   text-align: center;
 }
