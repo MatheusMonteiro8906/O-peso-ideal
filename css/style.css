@@ -980,3 +980,8 @@ iframe {
 .hoverVideo  {
 	cursor: pointer;
 }
+
+.textCredit {
+	align-items: center;
+	text-align: center;
+}
